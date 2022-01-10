@@ -7,14 +7,14 @@ body{
   font-family: var(--font), cursive;
   font-size: 20px;
   color: white;
+  background: linear-gradient(300deg,rgb(0, 110, 255),rgb(22, 22, 22));
+  background-size: 120% 120%;
+  animation: gradient-animation 12s ease infinite;
 }
 .parent {
   width: 100%;
   display: grid;
   grid-template-rows: 80px max-content max-content;
-  background: linear-gradient(300deg,rgb(0, 110, 255),rgb(22, 22, 22));
-  background-size: 120% 120%;
-  animation: gradient-animation 12s ease infinite;
 }
 @keyframes gradient-animation {
   0% {
