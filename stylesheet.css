@@ -244,6 +244,11 @@ a:hover{
   padding: 10px 25px;
   width: max-content;
 }
+@media (max-width:670px) and (min-width:496px){
+  label{
+    font-size:20px;
+  }
+}
 @media (max-width:495px) {
   *{
     margin: 0 0;
