@@ -2,6 +2,8 @@
 
 - https://www.layoutit.com/
 - https://csslayout.io/
+- https://freepik.com/
+- https://storyset.com
 - https://app.haikei.app
 - https://omatsuri.app
 - https://animated-gradient-background-generator.netlify.app/?ref=tiny-helpers
