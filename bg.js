@@ -20,8 +20,8 @@ stu[0].onclick = function(){
 span.onclick = function close(){
   modal[0].style.display = "none";
 }
-window.onclick = function(event) {
-  if(event.target == modal[0]) {
-    modal[0].style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if(event.target == modal[0]) {
+//     modal[0].style.display = "none";
+//   }
+// }
