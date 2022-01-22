@@ -43,20 +43,22 @@
       </div>
       <div class="modal">
       <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="flex-container">
+        <form class="flex-container" method="post" name="form" onsubmit="return validate()">
+          <span class="close">&times;</span>
             <h2 class="login">Sign in</h2>
             <div class="email">
               <span class="fa fa-envelope icon"></span>
-              <input type="email" placeholder="Email">
+              <input type="email" placeholder="Email" name="email">
             </div>
+            <div class="err" id="mail">Please enter your email</div>
             <br>
             <div class="password">
               <i class="fa fa-lock"></i>
-              <input type="password" placeholder="Password">
+              <input type="password" placeholder="Password" name="password">
             </div>
+            <div class="err" id="pass">Please enter valid password</div>
             <br>
-              <a href="#"><button class="b1">Sign In</button></a>
+            <button type="submit" class="b1" >Sign In</button>
             <a href="#" class="forget"><text>Forget Password?</text></a>
             <text class="or">Or</text>
             <div class="login-options">
@@ -73,7 +75,7 @@
                   <img src="https://img.icons8.com/external-justicon-flat-justicon/36/000000/external-linkedin-social-media-justicon-flat-justicon.png"/>
                 </a>
             </div>
-      </div>
+      </form>
       </div>
       </div>
       </div>
