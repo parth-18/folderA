@@ -180,6 +180,7 @@ h2{
 .flex-container input{
   padding: 10px 40px;
   width:50%;
+  text-align: center;
   margin: 0 auto;
   font-family: var(--font);
   font-size: 20px;
@@ -199,6 +200,14 @@ h2{
   height: 20px;
   top: 15px;
   left: 60px;
+}
+.err{
+  display: none;
+  font-size: 15px;
+  font-weight: lighter;
+  color: red;
+  background-color: rgba(255, 101, 101, 0.3);
+  padding:2px 20px;
 }
 .flex-container input::placeholder{
   font-family: var(--font);
@@ -262,11 +271,11 @@ h2{
 }
 .login-options{
   display:flex;
-  margin: 0 120px;
   justify-content: space-evenly;
   align-self: normal;
 }
 .close{
+  margin-left: auto;
   color: black;
   float: right;
   font-size: 35px;
@@ -371,15 +380,11 @@ h3 ~ p{
 .part3 h3{
   color: white;
 }
-@media (max-width:670px) and (min-width:496px){
-  label{
-    font-size:20px;
-  }
-}
-@media (max-width:495px) {
+@media (max-width:670px) {
   *{
     margin: 0 0;
     padding: 0 0;
+    font-size: 10px;
   }
   label{
     font-size: 20px;
@@ -387,10 +392,11 @@ h3 ~ p{
   .top{
     position: fixed;
     width: 100%;
-    background-color: rgba(17, 49, 107, 0.719);
+    background-color: rgba(0, 0, 0, 0.8);
     left:0;
     margin: 0 0;
     transition: all .5s;
+    display: none;
   }
   .top li{
     text-align: center;
@@ -399,6 +405,7 @@ h3 ~ p{
   }
   .top li a{
     font-size: 15px;
+    color: white;
     margin:0 0;
     padding:0 0;
   }
@@ -415,6 +422,50 @@ h3 ~ p{
     display: block;
   }
   #check:checked ~ ul{
-    width:0%;
+    display: block;
+  }
+  .search{
+    width: 80%;
+    font-size: 16px;
+  }
+  .search::placeholder{
+    font-size: 16px;
+  }
+  img.slide{
+    width: 90%;
+    height:200px;
+    margin: 0 auto;
+  }
+  .signup{
+    display: inherit;
+    margin: 0 auto;
+    position: inherit;
+  }
+  .user{
+    font-size: 12px;
+    height: auto;
+    width: auto;
+    padding: 5px 5px;
+    margin: 5px;
+  }
+  .feature img{
+    width: 200px;
+  }
+  .cards{
+    display: block;
+    overflow: auto;
+  }
+  .cards p{
+    font-size: 10px;
+  }
+  .fa{
+    display: none;
+  }
+  .flex-container input{
+    font-size: 10px;
+  }
+  .flex-container img{
+    width: 20px;
+    height: 20px;
   }
 }
