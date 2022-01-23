@@ -468,4 +468,7 @@ h3 ~ p{
     width: 20px;
     height: 20px;
   }
+  .err{
+  font-size: 10px;
+  }
 }
