@@ -2,6 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 /*basic reset*/
+:root{
+	--font : 'Reem Kufi',sans-serif;
+  }
 * {margin: 0; padding: 0;}
 
 html {
@@ -127,7 +130,7 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: linear-gradient(135deg, #005b97, #b700ff);
 	color: white;
 }
 text{
