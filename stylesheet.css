@@ -521,8 +521,9 @@ h3 ~ p{
   .cards p{
     font-size: 10px;
   }
-  .fa{
-    display: none;
+  .fa-envelope,.fa-lock{
+    top: 10px;
+    left: 10px;
   }
   .flex-container input{
     font-size: 10px;
