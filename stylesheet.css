@@ -121,13 +121,13 @@ a:hover {
   /* border-radius: 20px; */
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.5);
   width: inherit;
-  height: 500px;
+  height: 70%;
   overflow: hidden;
   /* display: none; */
 }
 .slide img {
   width: inherit;
-  object-position: 0 -100px;
+  object-position: 0 -150px;
   animation: kenburns-left 5s ease-in-out 1s infinite alternate both;
 }
 @keyframes kenburns-left {
@@ -642,6 +642,9 @@ h3 ~ p {
     width: 90%;
     height: 200px;
     margin: 0 auto;
+  }
+  .slide img{
+    object-position: 0;
   }
   .signup {
     display: inherit;
