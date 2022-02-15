@@ -2,6 +2,7 @@
 
 # Resources for Designing Purpose ... 
 
+- https://lottiefiles.com
 - https://animista.com/play
 - https://animate.style
 - https://vivify.mkcreative.cz
