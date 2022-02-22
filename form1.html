@@ -11,37 +11,37 @@
   <div class="container change">
     <div class="title">Registration</div>
     <div class="content">
-      <form action="#">
+      <form id="form">
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required>
+            <input type="text" placeholder="Enter your name" name="fname" >
           </div>
           <div class="input-box">
             <span class="details">Username</span>
-            <input type="text" placeholder="Enter your username" required>
+            <input type="text" placeholder="Enter your username" name="user">
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
+            <input type="text" placeholder="Enter your email" name="email" >
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required>
+            <input type="text" placeholder="Enter your number" name="phone" >
           </div>
           <div class="input-box">
             <span class="details">Password</span>
-            <input type="password" placeholder="Enter your password" required>
+            <input type="password" placeholder="Enter your password" name="pass" >
           </div>
           <div class="input-box">
             <span class="details">Confirm Password</span>
-            <input type="password" placeholder="Confirm your password" required>
+            <input type="password" placeholder="Confirm your password" name="cpass" >
           </div>
           <div class="input-box">
             <span class="details">Date of Birth</span>
             <input type="date" name="dob">
           </div>
-          <div class="gender-details">
+          <div class="gender-details" name="gender">
             <input type="radio" name="gender" id="dot-1">
             <input type="radio" name="gender" id="dot-2">
             <input type="radio" name="gender" id="dot-3">
@@ -58,7 +58,7 @@
             <label for="dot-3">
               <span class="dot three"></span>
               <span class="gender">Other</span>
-              </label>
+              </label> 
             </div>
           </div>
           <select id="select-country" class="form-control">
