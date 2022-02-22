@@ -119,3 +119,59 @@ var refreshDuration = 10000;
         
         window.onload = onLoad;
         window.onresize = onResize;
+$("#form").validate({
+    rules:{
+        fname: {
+            required: true,
+        },
+        user:{
+            required: true,
+        },
+        email:{
+            required: true,
+            email: true,
+        },
+        phone:{
+            required: true,
+            minlength: 10,
+            maxlength: 10,
+            digits: true,
+        },
+        pass:{
+            required: true,
+        },
+        cpass:{
+            required: true,
+        },
+        dob:{
+            required: true,
+        },
+    },
+    messages:{
+        fname:{
+            required: "**Enter Full Name."
+        },
+        user:{
+            required: "**Enter Username."
+        },
+        email:{
+            required: "**Enter Email."
+        },
+        phone:{
+            required: "**Enter Phone Number.",
+            minlength: "**Enter 10 Digit Number." ,
+            maxlength: "**Enter 10 Digit Number.",
+            digit: "**Use Only Numbers."
+        },
+        pass:{
+            required: "**Enter Password.",
+        },
+        cpass:{
+            required: "**Enter Password Again!",
+            equalTo: "**Password Dosen't Match."
+        },
+        dob:{
+            required: "**Please Select Date-of-Birth."
+        },
+    }
+});
