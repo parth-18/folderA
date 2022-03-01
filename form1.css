@@ -106,7 +106,7 @@ body{
 }
 input[name="dob"]{
   padding: 15px;
-	border: 1px solid #ccc;
+	/* border: 2px solid #ccc; */
 	border-radius: 3px;
 	margin-bottom: 10px;
 	width: 100%;
@@ -114,7 +114,7 @@ input[name="dob"]{
 	font-family: 'Poppins',sans-serif;
 }
 form .user-details .input-box{
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   width: calc(100% / 2 - 20px);
 }
 form .input-box span.details{
@@ -124,7 +124,7 @@ form .input-box span.details{
   animation: tracking-in-expand 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 0.5s both;
 }
 .user-details .input-box input{
-  height: 45px;
+  height: 54px;
   width: 100%;
   outline: none;
   font-size: 16px;
@@ -134,9 +134,9 @@ form .input-box span.details{
   /* border-bottom-width: 2px; */
   transition: all 0.3s ease;
 }
-.user-details .input-box input:focus{
+/* .user-details .input-box input:focus{
   border-color: #001935;
-}
+} */
  form .gender-details .gender-title{
   font-size: 20px;
   font-weight: 500;
@@ -240,13 +240,71 @@ form .user-details .input-box{
 .error{
   color: red;
 }
-
-input[class="error"]{
-  border: 1px dashed;
+label.error{
+  /* margin: 10px; */
+  font-size: small;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  /* margin: 20px; */
 }
 
-.user-details .input-box input[class="error"]:focus{
-  /* border-color: #b22cff; */
-  border: 2px dashed;
+
+input.error {
+  position: relative;
+  border: 2px dashed red;
 }
 
+input.error:focus {
+  border-radius: 17px;
+  transition: 0.8s;
+}
+.wrapper{
+  position: relative;
+  display: flex;
+  height: auto;
+  /* color: red; */
+  /* border-color: #19dcea;*/ 
+} 
+.label{
+  position: absolute;
+  top: 10px;
+  left: 1rem;
+  /* transform: translateY(-50%); */
+  color:#888;
+  /* color:rgba(0, 0, 0, 0.4); */
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+input[class="in"]{
+  height: inherit;
+  width: 10rem;
+  /* border: 2px solid black; */
+  outline: none;
+  background: transparent;
+  /* color: #f7f7f7; */
+  text-indent: 1rem;
+  transition: all 0.1s;
+}
+input[class="in"]:focus {
+  border: 2px dashed #19dcea;
+  border-radius: 17px;
+  transition: all 0.8s;
+}
+.in:focus ~ .label, .in:not(:placeholder-shown).in:not(:focus) ~ .label{
+  border-radius: 50px;
+  font-size: small;
+  color: #19dcea;
+  /* color: rgba(255,255,255,0.75); */
+  background: rgb(241, 241, 241);
+  transform: translateY(-1.3rem);
+}
+
+input.error:focus~.label,input.error~.label{
+  color: red;
+}
+
+.in:not(:placeholder-shown).in:not(:focus) ~ .label{
+  color: #888;
+}
