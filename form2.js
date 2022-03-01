@@ -7,7 +7,7 @@ var animating; //flag to prevent quick multi-click glitches
 $.validator.addMethod("passRegex", function(value, element) {
     return this.optional(element) || /^[a-zA-Z0-9]*$/i.test(value);
 }, "Password must contain only letters, numbers");
-const var form = $("#msform");
+var form = $("#msform");
     
 form.validate({
         errorClass: 'error',
