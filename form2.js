@@ -4,13 +4,108 @@ var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
+$.validator.addMethod("passRegex", function(value, element) {
+    return this.optional(element) || /^[a-zA-Z0-9]*$/i.test(value);
+}, "Password must contain only letters, numbers");
+var form = $("#msform");
+    
+form.validate({
+        errorClass: 'error',
+        highlight: function(element, errorClass){
+            $(element).addClass('has-error');
+
+        },
+        unhighlight: function(element, errorClass){
+            $(element).removeClass('has-error');
+        },
+        rules:{
+            email:{
+                required: true,
+            },
+            pass:{
+                passRegex: true,
+                required: true,
+            },
+            cpass:{
+                required: true,
+                equalTo: "#p1",
+            },
+            fname:{
+                required: true,
+            },
+            dob:{
+                required: true,
+            },
+            phone:{
+                required: true,
+                minlength: 10,
+                maxlength: 10,
+                digits: true,
+            },
+            education:{
+                required: true,
+            },
+            expertise:{
+                required: true,
+            },
+            lang:{
+                required: true,
+            },
+            rate:{
+                required: true,
+            },
+        },
+        messages:{
+            email:{
+                required: "**Enter Email.",
+            },
+            pass:{
+                required: "**Enter Password.",
+            },
+            cpass:{
+                required: "**Enter Password Again!",
+                equalTo: "**Password Dosen't Match."
+            },
+            fname:{
+                required: "**Enter Full Name.",
+            },
+            dob:{
+                required: "**Please Enter Date of Birth."
+            },
+            phone:{
+                required: "**Enter Phone Number.",
+                minlength: "**Enter 10 Digit Number." ,
+                maxlength: "**Enter 10 Digit Number.",
+                digits: "Use Only Numbers."
+            },
+            education:{
+                required:"Enter Qualification"
+            },
+            education:{
+                required: "Enter the Qualification.",
+            },
+            expertise:{
+                required: "Enter the area of expertise.",
+            },
+            lang:{
+                required: "Enter Known Languages.",
+            },
+            rate:{
+                required: "Enter the fees as per the Hour.",
+            }
+        }
+});
+
 $(".next").click(function(){
-	if(animating) return false;
+    
+    if(form.valid()){
+
+    if(animating) return false;
 	animating = true;
-	
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
 	
+    
 	//activate next step on progressbar using the index of next_fs
 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
@@ -37,6 +132,7 @@ $(".next").click(function(){
 		//this comes from the custom easing plugin
 		easing: 'easeInOutBack'
 	});
+    }
 });
 
 $(".previous").click(function(){
@@ -75,8 +171,17 @@ $(".previous").click(function(){
 });
 
 $(".submit").click(function(){
-	return false;
-})
+    if(form.valid()){
+        return false;
+    } 
+    else {
+        return true;
+    }
+});
+
+
+
+
 var refreshDuration = 10000;
         var refreshTimeout;
         var numPointsX;
