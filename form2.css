@@ -62,7 +62,7 @@ body {
   left: 0%;
   background: rgb(241, 241, 241);
   border: 0 none;
-  border-radius: 3px;
+  border-radius: 7px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   padding: 20px 30px;
   box-sizing: border-box;
@@ -80,15 +80,21 @@ body {
 #msform input,
 #msform textarea {
   padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 10px;
+  background: rgb(241, 241, 241);
+  /* border: 1px solid #ccc; */
+  /* border-radius: 10px; */
+  /* text-align: center; */
+  margin-bottom: 20px;
+  margin-top: 10px;
   width: 100%;
+  outline: none;
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
-  color: #2c3e50;
+  /* color: #2c3e50; */
   font-size: 13px;
 }
+
+
 /*buttons*/
 #msform .action-button {
   width: 100px;
@@ -99,7 +105,7 @@ body {
   border-radius: 1px;
   cursor: pointer;
   padding: 10px 5px;
-  margin: 10px 5px;
+  margin: 30px 5px;
 }
 #msform .action-button:hover,
 #msform .action-button:focus {
@@ -186,3 +192,79 @@ select {
   background-color: white;
   font-size: 13px;
 }
+
+.wrapper{
+  position: relative;
+  display: flex;
+  height: auto;
+  /* color: red; */
+  /* border-color: #19dcea;*/ 
+} 
+.label{
+  position: absolute;
+  top: 20px;
+  left: 1rem;
+  /* transform: translateY(-50%); */
+  color:#888;
+  /* color:rgba(0, 0, 0, 0.4); */
+  padding: 0.25rem 0.5rem;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+input[class="in"]{
+  height: inherit;
+  width: 10rem;
+  border: 2px solid #888;
+  outline: none;
+  background: transparent;
+  /* color: #f7f7f7; */
+  text-indent: 1rem;
+  transition: all 0.1s;
+}
+input.in:focus {
+  border: 2px dashed #19dcea;
+  border-radius: 15px;
+  transition: all 0.8s;
+}
+.in:focus ~ .label, .in:not(:placeholder-shown).in:not(:focus) ~ .label{
+  border-radius: 50px;
+  font-size: small;
+  color: #19dcea;
+  /* color: rgba(255,255,255,0.75); */
+  background: rgb(241, 241, 241);
+  transform: translateY(-1.55rem);
+}
+.in:not(:placeholder-shown).in:not(:focus) ~ .label{
+  color: #888;
+}
+
+
+
+.error {
+  color: red;
+  border-bottom: 1px dashed red;
+  font-size: 12px;
+  margin: 0 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.has-error{
+  border: 2px dashed red;
+  position:relative;
+} 
+
+.has-error:focus ~ .label{
+  color: red;
+}
+
+/* .has-error:focus{
+  border-radius: 15px;
+  transition: all 0.8s;
+} */
+input.has-error:focus {
+  border: 2px dashed red;
+  border-radius: 15px;
+  transition: all 0.8s;
+}
+
