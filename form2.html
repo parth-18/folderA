@@ -8,7 +8,7 @@
     <body> 
       <div id="bg"></div>
 <!-- multistep form -->
-<form id="msform">
+<form id="msform"  >
     <!-- progressbar -->
     <ul id="progressbar">
       <li class="active">Create Account</li>
@@ -18,19 +18,43 @@
     <!-- fieldsets -->
     <fieldset>
       <h2 class="fs-title">Create your account</h2>
-      <input type="text" name="email" placeholder="Email" />
+      <!-- <input type="text" name="email" placeholder="Email" />
       <input type="password" name="pass" placeholder="Password" />
-      <input type="password" name="cpass" placeholder="Confirm Password" />
-      <input type="button" name="next" class="next action-button" value="Next" />
+      <input type="password" name="cpass" placeholder="Confirm Password" /> -->
+      <div class="wrapper">
+        <input class="in" type="email" placeholder=" " name="email" />
+        <div class="label">Email</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" id="p1" type="password" placeholder=" " name="pass"/>
+        <div class="label">Password</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="password" placeholder=" " name="cpass"/>
+        <div class="label">Confirm Password</div>
+      </div>
+      <input  type="button" name="next" class="next action-button" value="Next"/>
     </fieldset>
     <fieldset>
       <h2 class="fs-title">Personal Details</h2>
-      <input type="text" name="fname" placeholder="First Name" />
-      <input type="text" name="lname" placeholder="Last Name" />
-      <text>Date of Birth :</text>
+      <!-- <input id="f1" type="text" name="fname" placeholder="Full Name..." />
+      <input type="text" name="lname" placeholder="Last Name" /> -->
+      <!-- <text>Date of Birth :</text> 
       <input type="date" name="dob" />
-      <input type="text" name="phone" placeholder="Phone" />
-      <select id="select-country" class="form-control">
+      <input type="text" name="phone" placeholder="Phone" /> -->
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="fname" />
+        <div class="label">Full Name</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="date" placeholder=" " name="dob" />
+        <div class="label">Date_of-Birth</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="phone" />
+        <div class="label">Phone</div>
+      </div>
+      <select id="select-country" class="form-control" name="select">
         <option hidden disabled selected value> Select Your Region </option>
         <option value="Adilabad">Adilabad</option>Agra
         <option value="Agra">Agra</option>Adilabad
@@ -675,11 +699,31 @@
     </fieldset>
     <fieldset>
       <h2 class="fs-title">Profile Setup</h2>
-      <textarea name="about" placeholder="Profile Overview" cols="10" rows="5"></textarea>
-      <input type="text" name="-education" placeholder="Qualification" />
+      <!-- <textarea name="about" placeholder="Profile Overview" cols="10" rows="5"></textarea>
+      <input type="text" name="education" placeholder="Qualification" />
       <input type="text" name="expertise" placeholder="Area of Expertise" />
       <input type="text" name="lang" placeholder="Known Languages" />
-      <input type="text" name="rate" placeholder="Hourly Rate" />
+      <input type="text" name="rate" placeholder="Hourly Rate" /> -->
+      <div class="wrapper">
+        <textarea class="in" placeholder=" " name="about" cols="10" rows="5"></textarea>
+        <div class="label">Profile Overview</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="education" />
+        <div class="label">Qualification</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="expertise" />
+        <div class="label">Expertise</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="lang" />
+        <div class="label">Known Languages</div>
+      </div>
+      <div class="wrapper">
+        <input class="in" type="text" placeholder=" " name="rate" />
+        <div class="label">Hourly Rate</div>
+      </div>
       <select class="mode">
         <option hidden disabled selected value>Preferred Mode</option>
         <option value="Online">Online</option>
@@ -692,7 +736,9 @@
   </form>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"> </script>
-  <script src="form2.js"></script>
-    </body>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
+  <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.js"></script> -->
+  <script src="form2.js" type="text/javascript"></script>
+  </body>
 </html>
