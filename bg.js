@@ -27,28 +27,27 @@ window.onclick = function (event) {
   }
 };
 
-var email = document.forms["form"]["email"];
-var pass = document.forms["form"]["password"];
-var e_err = document.getElementById("mail");
-var p_err = document.getElementById("pass");
 
 function validate() {
+  var email = document.forms["form"]["email"];
+  var pass = document.forms["form"]["password"];
+  var e_err = document.getElementById("mail");
+  var p_err = document.getElementById("pass");
   if (
-    email.value.length === "undefined" ||
-    pass.value.length === "undefined"
+    email.value == "" ||
+    pass.value == ""
   ) {
-    if (email.value.length < 8 || email.value.length === "undefined") {
-      email.style.border = "1px solid red";
+    if (email.value.length == "") {
       e_err.style.display = "block";
       email.focus();
     }
-    if (pass.value.length < 8 || pass.value.length === "undefined") {
-      pass.style.border = "1px solid red";
+    if (pass.value.length == "") {
       p_err.style.display = "block";
       pass.focus();
     }
     return false;
-  } else {
+  }
+  else {
     return true;
   }
 }
