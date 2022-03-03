@@ -145,6 +145,24 @@ a:hover {
     transform-origin: left;
   }
 }
+@keyframes color-change-5x {
+  0% {
+    background: #19dcea;
+    /* background: linear-gradient(145deg, #192839 50%, #1ab4e2 115%); */
+  }
+  25% {
+    background: #b22cff;
+  }
+  50% {
+    background: #ea2222;
+  }
+  75% {
+    background: #f5be10;
+  }
+  100% {
+    background: #3bd80d;
+  }
+}
 .signup {
   width: 80%;
   display: flex;
