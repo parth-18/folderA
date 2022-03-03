@@ -12,6 +12,12 @@
 //   setTimeout(carousel, 2000); // Change image every 2 seconds
 // }
 
+$('.icon').click(function(){
+  $(this)
+    .toggleClass('outdent')
+    .toggleClass('remove');
+})
+
 var modal = document.getElementsByClassName("modal");
 var stu = document.getElementsByClassName("login");
 var span = document.getElementsByClassName("close")[0];
